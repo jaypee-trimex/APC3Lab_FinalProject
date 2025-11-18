@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.flex-container {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+}
+.header {
+    background-color: rgb(187, 240, 240);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+.header h1 {
+    font-family: Impact;
+    font-size: 42px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    color: goldenrod;
+    text-shadow: rgb(187, 240, 240) 1px 1px 0px, goldenrod 2px 2px 0px;
+}
+.navigation {
+    font-family: helvetica;
+    text-transform: lowercase;
+    text-align: center;
+    margin: 5px 0;
+    text-shadow: darkslategray 0px 0px 4px;
+}
+.navigation a {
+    color: aliceblue;
+    text-decoration: none;
+    display: inline-block;
+    padding: 3px 8px;
+    margin: 0 10px;
+    border: 1px solid transparent;
+    transition: all 0.1s ease-in-out;
+}
+.navigation a:hover {
+    border: 1px solid goldenrod;
+    color: goldenrod;
+    text-shadow: aliceblue 0px 0px 4px;
+    background-color: rgba(218, 165, 32, 0.03);
+}
+.product {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+    margin: 0 auto;
+}
+.product_Content {
+    position: relative;
+    display: inline-block;
+    justify-self: center;
+    align-self: center;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+.product_Name,
+.product_Price { 
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); 
+    text-shadow: darkslategray 0px 0px 4px;
+    color: aliceblue;
+    font-family: Tahoma;
+    font-variant: small-caps;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.product_Name { 
+    top: 0;
+}
+.product_Price { 
+    bottom: 0;
+}
+.product_Name ,
+.product_Price p {
+    padding: 3px;
+    font-size: 2vw;
+}
+.product_Content:hover {
+    box-shadow: 0px 0px 10px goldenrod;
+}
+.product_Content:hover .product_Name,
+.product_Content:hover .product_Price {
+    opacity: 1;
+}
+img:hover {
+    transform: scale(1.05);
+}
+img
+{
+    display: block;
+    object-fit: contain;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+.default_Img {
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+}
+.hover_Img {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+.product_Content:hover .default_Img {
+    opacity: 0;
+}
+.product_Content:hover .hover_Img {
+    opacity: 1;
+}
+.footer  { 
+    text-transform: lowercase;
+    font-variant: small-caps;
+    color: aliceblue;
+    text-shadow: black 0px 0px 4px;
+    background-color: rgb(187, 240, 240);
+    box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
